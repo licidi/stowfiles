@@ -1,0 +1,15 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/nvme1n1p2 during installation
+UUID=b92a2216-cd31-4999-b3db-45c7fdce9fc1 /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/nvme1n1p1 during installation
+UUID=A525-768A  /boot/efi       vfat    umask=0077      0       1
+/swapfile                                 none            swap    sw              0       0
+
+# mount synology NAS
+//McCabe_home.local/home /media/synology cifs vers=2.0,credentials=/etc/samba/credentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777,nofail
