@@ -1,3 +1,4 @@
 alias news='python3 /home/licidi/vscode/python/news_requests.py'
 alias mover='python3 /home/licidi/vscode/fileMover.py'
 alias osrs='flatpak run com.jagexlauncher.JagexLauncher'
+alias protontricks='flatpak run com.github.Matoking.protontricks'
